@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/miniflycn/url-har.png?branch=master)](https://travis-ci.org/miniflycn/url-har)
+[![Coverage Status](https://coveralls.io/repos/miniflycn/url-har/badge.png?branch=master)](https://coveralls.io/r/miniflycn/url-har?branch=master)
 # url-har
 A library to get HTTP Archive files
 
