@@ -1,0 +1,31 @@
+{
+  "name": "url-har",
+  "version": "0.0.1",
+  "description": "A library to get HTTP Archive files",
+  "keywords": [
+    "HAR",
+    "url",
+    "library"
+  ],
+  "repository": "git://github.com/miniflycn/url-har.git",
+  "author": "Daniel Yang <miniflycn@gmail.com>",
+  "main": "index",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "connect": "*",
+    "blanket": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*"
+  },
+  "scripts": {
+    "test": "mocha",
+    "blanket": {
+      "pattern": "url-har/lib"
+    }
+  },
+  "license": "MIT"
+}
