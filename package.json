@@ -1,6 +1,6 @@
 {
   "name": "url-har",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A library to get HTTP Archive files",
   "keywords": [
     "HAR",
