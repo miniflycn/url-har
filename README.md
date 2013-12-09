@@ -3,6 +3,13 @@
 # url-har
 A library to get HTTP Archive files
 
+## Dependence
+Make sure PhantomJS is insalled. This module expects the phantomjs binary to be in PATH somewhere and must be greater than 1.9.0. In other words, type this:
+
+	$ phantomjs -v
+
+if it print 1.9.x. you can do next.
+
 ## Usage
 ```javascript
 var har = require('url-har');
