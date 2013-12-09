@@ -33,7 +33,7 @@ describe('har', function () {
     har(['http://127.0.0.1:7777/available/1.html', 'http://127.0.0.1:7777/available/2.html'])
     .success(function (data) {
       data.log.pages[0].id.should.equal(num === 0 ? 'http://127.0.0.1:7777/available/1.html' : 'http://127.0.0.1:7777/available/2.html')
-      if (++num === 1) return done();
+      if (++num === 2) return done();
     })
   })
 
