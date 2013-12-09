@@ -28,6 +28,15 @@ describe('har', function () {
     });
   });
 
+  it('should able to get some har datas', function (done) {
+    var num = 0;
+    har(['http://127.0.0.1:7777/available/1.html', 'http://127.0.0.1:7777/available/2.html'])
+    .success(function (data) {
+      data.log.pages[0].id.should.equal(num === 0 ? 'http://127.0.0.1:7777/available/1.html' : 'http://127.0.0.1:7777/available/2.html')
+      if (++num === 1) return done();
+    })
+  })
+
   it('should occur a error', function (done) {
     har('wrongaddress').fail(function (data) {
       data.should.equal('ADDRESS is wrong!');
