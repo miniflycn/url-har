@@ -10,15 +10,19 @@
 
   // http://page-speed.googlecode.com/files/har_to_pagespeed.exe
   fs.exists(filePath, function (exists) {
-    file = fs.createWriteStream(filePath);
-    http.get('http://page-speed.googlecode.com/files/har_to_pagespeed.exe', function (res) {
-      res.on('data', function (data) {
-        file.write(data);
-      }).on('end', function () {
-        file.end();
-        harUrl('http://www.qq.com');
+    if (exists) {
+      harUrl('http://ke.qq.com');
+    } else {
+      file = fs.createWriteStream(filePath);
+      http.get('http://page-speed.googlecode.com/files/har_to_pagespeed.exe', function (res) {
+        res.on('data', function (data) {
+          file.write(data);
+        }).on('end', function () {
+          file.end();
+          harUrl('http://ke.qq.com');
+        });
       });
-    });
+    }
   });
   
   function harUrl(url) {
